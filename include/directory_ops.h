@@ -3,6 +3,6 @@
 
 void list_directory(const char *path);
 int create_folder(const char *folder_name);
-int delete_folder(const char *folder_name);
+int remove_folder(const char *folder_name);
 
 #endif

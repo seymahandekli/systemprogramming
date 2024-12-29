@@ -8,7 +8,7 @@
 #include <errno.h>
 #include <unistd.h>
 #include <time.h>
-#include "directory_ops.h"
+#include "../include/directory_ops.h"
 
 // İzinleri okunabilir formatta döndürmek için yardımcı bir fonksiyon
 void print_permissions(mode_t mode) {
@@ -99,7 +99,7 @@ int create_folder(const char *folder_name) {
     }
 }
 
-int delete_folder(const char *folder_name) {
+int remove_folder(const char *folder_name) {
     // Check if the folder exists
     struct stat st;
     if (stat(folder_name, &st) == -1) {

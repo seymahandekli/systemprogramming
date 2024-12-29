@@ -2,10 +2,10 @@
 #include <time.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include "logger.h"
+#include "../include/logger.h"
 
 void write_log(const char *operation, const char *status) {
-    int log_fd = open("file_manager.log", O_WRONLY | O_CREAT | O_APPEND, 0644);
+    int log_fd = open("log/file_manager.log", O_WRONLY | O_CREAT | O_APPEND, 0644);
     if (log_fd < 0) {
         perror("Error opening log file");
         return;
