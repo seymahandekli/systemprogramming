@@ -1,0 +1,2 @@
+# Ignore all object files with .o extension
+*.o
