@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "file_operations.h"
 #include "directory_ops.h"
@@ -152,8 +153,8 @@ int main()
             search_folder(arg1, arg2);
         }
         else if (strcmp(operation, "schmod") == 0 && arg1 && arg2)
-        {                                        // New operation: Change permissions
-            mode_t mode = strtol(arg2, NULL, 8); // Convert the mode string to an octal number
+        {                                      
+            mode_t mode = strtol(arg2, NULL, 8); 
             if (change_permissions(arg1, mode) == 0)
                 write_log("Change Permissions", "Success");
             else
@@ -180,17 +181,17 @@ int main()
 void display_help()
 {
     printf("Available commands:\n");
-    printf("  slist <directory>        - List contents of a directory\n");
-    printf("  screatedir <dirname>     - Create a new directory\n");
-    printf("  sremovedir <dirname>     - Remove a directory\n");
-    printf("  scopy <source> <dest>    - Copy a file from source to destination\n");
-    printf("  screatefile <filename>   - Create a new file\n");
-    printf("  sremovefile <filename>   - Remove a file\n");
-    printf("  sread <filename>         - Read and display the contents of a file\n");
-    printf("  swrite <filename> <data> - Write data to a file\n");
-    printf("  smove <source> <dest>    - Move a file from source to destination\n");
-    printf("  ssearch <folder> <name>  - Search for files/directories within a folder\n");
-    printf("  schmod <path> <mode>     - Change permissions of a file or directory (e.g., 0644)\n");
-    printf("  help                     - Display this help message\n");
-    printf("  exit                     - Exit the program\n");
+    printf("  slist <directory>          - List contents of a directory\n");
+    printf("  screatedir <dirname>       - Create a new directory\n");
+    printf("  sremovedir <dirname>       - Remove a directory\n");
+    printf("  scopy <source> <dest>      - Copy a file from source to destination\n");
+    printf("  screatefile <filename>     - Create a new file\n");
+    printf("  sremovefile <filename>     - Remove a file\n");
+    printf("  sread <filename>           - Read and display the contents of a file\n");
+    printf("  swrite <filename> <data>   - Write data to a file\n");
+    printf("  smove <source> <dest>      - Move a file from source to destination\n");
+    printf("  ssearch <folder> <name>    - Search for files/directories within a folder\n");
+    printf("  schmod <path> <mode>       - Change permissions of a file or directory (e.g., 0644)\n");
+    printf("  help                       - Display this help message\n");
+    printf("  exit                       - Exit the program\n");
 }
