@@ -1,3 +1,4 @@
 *.o
 *.log
 bin/file_manager
+.vscode

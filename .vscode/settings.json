@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "file_operations.h": "c",
-        "directory_ops.h": "c",
-        "logger.h": "c"
-    }
-}
