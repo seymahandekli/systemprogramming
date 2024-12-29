@@ -1,4 +1,3 @@
-# Ignore all object files with .o extension
 *.o
 *.log
-bin/*.
+bin/file_manager
